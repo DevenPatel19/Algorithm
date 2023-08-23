@@ -58,7 +58,7 @@ function fibonacci(num) {
 
 function rFib(num) {
   // base case if num less than 2 then return num
-  if ( num < 2){
+  if ( num < 2 ){
     return num;
   }
   // rFib current = rFib current-1 + rFib current -2
