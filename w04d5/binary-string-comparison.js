@@ -39,10 +39,11 @@ const expected3 = true;
 // create the function and decide what params it needs and what it will return
 
 function binarySearch(arr, num, high = arr.length - 1, low = 0) {
+  // base case
   if (low > high) {
     return false;
   }
-
+  // set mid point
   let mid = Math.floor((high - low) / 2) + low;
 
   if (arr[mid] == num) {
@@ -55,14 +56,8 @@ function binarySearch(arr, num, high = arr.length - 1, low = 0) {
   return binarySearch(arr, num, high, low);
 }
 
+// Test cases
 console.log(binarySearch(nums1, searchNum1));
 console.log(binarySearch(nums2, searchNum2));
 console.log(binarySearch(nums3, searchNum3));
 
-// Test cases
-
-console.log(binarySearch(nums1, searchNum1, 0, nums1.length - 1) === expected1); // Output: true
-
-console.log(binarySearch(nums2, searchNum2, 0, nums2.length - 1) === expected2); // Output: true
-
-console.log(binarySearch(nums3, searchNum3, 0, nums3.length - 1) === expected3); // Output: true
